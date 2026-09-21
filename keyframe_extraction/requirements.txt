@@ -1,0 +1,10 @@
+# torch (bản CUDA) được cài riêng trong setup.sh / setup.bat
+numpy>=1.26
+opencv-python-headless>=4.8
+pyyaml>=6.0
+imageio-ffmpeg>=0.5          # ffmpeg đi kèm, không cần cài ffmpeg hệ thống
+ffmpeg-python
+huggingface_hub
+pillow
+packaging
+omnishotcut @ git+https://github.com/UVA-Computer-Vision-Lab/OmniShotCut.git@40ecf12a0f6ace617680cf22b74da0bef4af3c21

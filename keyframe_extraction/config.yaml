@@ -1,0 +1,24 @@
+# ============================================================
+#  CHỈ CẦN SỬA 2 ĐƯỜNG DẪN DƯỚI ĐÂY
+# ============================================================
+
+# Thư mục chứa video (.mp4, ...). Tìm cả trong thư mục con,
+# vd: Videos/L21/video/L21_V001.mp4
+video_dir: /path/to/Videos
+
+# Thư mục chính để ghi kết quả. Sẽ tạo ra:
+#   <output_dir>/keyframes/L21/L21_V001/000123.webp
+#   <output_dir>/map-keyframes/L21_V001.csv   (frame_id,fps,timestamp)
+#   <output_dir>/shots/L21_V001.json          (danh sách shot, để debug)
+output_dir: /path/to/output
+
+# ============================================================
+#  Các tuỳ chọn dưới đây giữ nguyên để cắt giống hệ thống cũ
+# ============================================================
+gpu: 0                                   # chỉ số GPU NVIDIA
+checkpoint: uva-cv-lab/OmniShotCut_v1.5  # tự tải từ HuggingFace lần đầu (~ vài trăm MB)
+mode: clean_shot                         # clean_shot: chỉ lấy shot thường, bỏ đoạn chuyển cảnh
+overlap: 20                              # số frame chồng lấn giữa các cửa sổ suy luận
+image_format: webp                       # webp | jpg | png
+image_quality: 80                        # chất lượng webp/jpg (0-100)
+group_by_lot: true                       # L21_V001 -> keyframes/L21/L21_V001/ ; false -> keyframes/L21_V001/
